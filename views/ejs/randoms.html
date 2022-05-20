@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <title>Randoms</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <ul class="list-group">
+      <li class="list-group-item">Numeros aleatorios del 1 al 1000</li>
+      <% Object.keys(cant).forEach(key=> { %>
+        <br>
+        <li class="list-group-item list-group-item-success">
+          <%= key %> : cantidad de repeticiones --> <%= cant[key] %>
+        </li>
+        <% }) %>
+    </ul>
+  </div>
+</body>
+
+</html>

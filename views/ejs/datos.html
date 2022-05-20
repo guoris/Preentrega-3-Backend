@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <script src="./socket.io/socket.io.js"></script>
+</head>
+
+<body>
+  <br>
+  <br>
+  <div style="display: flex; justify-content: space-between" class="alert alert-success" role="alert">
+    <div>
+      <h1 class="text=left">Bienvenido <%= usuario.user %>!</h1>
+    </div>
+    <div style="width: 12%; height: 40%; margin: auto 0; text-align: center;">
+      <button style="text-align: center;" onclick="location.href='logout'" type="button" class="btn btn-warning text-right">Logout</button>
+    </div>
+  </div>
+  <br>
+  <br>
+
+  <h2 style="text-align: center; margin-top: 50px">Ingrese producto</h2>
+  <form style="width:450px; margin: 5% auto 0 auto;" class="prod-form" id="add" action="/productos" method="POST">
+    <div class="d-flex flex-column align-items-center">
+      <input type="text" name="title" class="form-control" placeholder="Nombre del Producto"
+        style="margin-bottom: 10px;">
+      <input type="text" name="price" class="form-control" placeholder="Precio del Producto"
+        style="margin-bottom: 10px;">
+      <input type="text" name="thumbnail" class="form-control" placeholder="Thumbnail del Producto"
+        style="margin-bottom: 10px;">
+      <div style="display: flex;">
+        <button id="formBtn" type="submit" class="btn btn-primary">Ingresar Producto</button>
+      </div>
+    </div>
+  </form>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <div id="lista-productos">
+    <% if (data.length> 0) { %>
+      <h1 style="text-align: center;">Productos Cargados</h1>
+      <table style="width: 900px; margin: 0 auto;" class="table table-dark table-hover">
+        <thead>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Foto</th>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+      <% } else { %>
+        <p class="alert alert-danger" id="alerta-no-encontrado">No se encontro data, lo siento!</p>
+        <% } %>
+  </div>
+
+  <script src="scripts/ioHandler.js"></script>
+</body>
+
+</html>

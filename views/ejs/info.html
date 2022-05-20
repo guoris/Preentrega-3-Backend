@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <title>Info</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+          <div class="card-header">Argumentos de entrada</div>
+          <div class="card-body">
+            <h5 class="card-title">
+              <%= argv %>
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+          <div class="card-header">Nombre de la plataforma (sistema operativo)</div>
+          <div class="card-body">
+            <h5 class="card-title">
+              <%= platform %>
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+          <div class="card-header">Version de Node.js</div>
+          <div class="card-body">
+            <h5 class="card-title">
+              <%= version %>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+          <div class="card-header">Memoria total reservada (rss)</div>
+          <div class="card-body">
+            <h5 class="card-title">
+              <%= memory %>
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+          <div class="card-header">Path de ejecucion</div>
+          <div class="card-body">
+            <h5 class="card-title">
+              <%= execPath %>
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+          <div class="card-header">Process id</div>
+          <div class="card-body">
+            <h5 class="card-title">
+              <%= pid %>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+          <div class="card-header">Carpeta del proyecto</div>
+          <div class="card-body">
+            <h5 class="card-title">
+              <%= cwd %>
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+          <div class="card-header">Cantidad CPUs</div>
+          <div class="card-body">
+            <h5 class="card-title">
+              <%= procesadores %>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
